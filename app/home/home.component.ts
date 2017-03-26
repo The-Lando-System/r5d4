@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
     this.userSvc.returnUser()
     .then((user:User) => {
       this.user = user;
+      this.homeLoading = false;
     }).catch((res:any) => {
       console.log('User is not logged in');
       this.homeLoading = false;
@@ -44,6 +45,7 @@ export class HomeComponent implements OnInit {
       this.userSvc.returnUser()
       .then((user:User) => {
         this.user = user;
+        this.homeLoading = false;
       }).catch((res:any) => {
         console.log('User is not logged in');
         this.homeLoading = false;

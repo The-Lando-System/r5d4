@@ -23,6 +23,10 @@ import { LoginComponent } from './login/login.component';
       {
         path: '',
         component: HomeComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
       }
     ])
   ],

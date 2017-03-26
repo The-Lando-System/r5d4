@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'info-mgr-app',
+  selector: 'r5d4-app',
   templateUrl: 'app.component.html',
   styleUrls: [ 'app.component.css' ],
   providers: []

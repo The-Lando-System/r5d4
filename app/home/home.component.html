@@ -4,14 +4,21 @@
   </div>
 </div>
 
-<div *ngIf="!user && !homeLoading">
-  <login></login>
-</div>
-
 <div *ngIf="user && !homeLoading">
   <div class="container">
     <div class="row">
       <h1>Hello {{user.firstName}}</h1>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!homeLoading">
+  <div class="container">
+    <div class="row">
+      <h1>Check your network speed</h1>
+    </div>
+    <div class="row">
+      <!--<img src="resources/images/R5-D4.png">-->
     </div>
   </div>
 </div>

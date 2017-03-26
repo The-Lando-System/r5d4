@@ -1,5 +1,9 @@
 body {
   background-color: #fafafa!important;
+  background-image: url("resources/images/R5-D4.png");
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position: 50px 150px;
 }
 
 .main {

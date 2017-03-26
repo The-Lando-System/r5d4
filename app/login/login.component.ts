@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Broadcaster } from '../sarlacc-client/broadcaster';
 import { UserService } from '../sarlacc-client/user.service';
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private broadcaster: Broadcaster
+    private broadcaster: Broadcaster,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -44,6 +46,8 @@ export class LoginComponent implements OnInit {
       this.user = user;
       this.loginLoading = false;
       this.creds = {};
+      let link = ['/'];
+      this.router.navigate(link);
     }).catch((error:any) => {
       console.log(error);
       this.loginLoading = false;
