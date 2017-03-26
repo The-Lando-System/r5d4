@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 
+import { Globals } from './globals';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { LoginComponent } from './login/login.component';
     Logger,
     CookieService,
     Broadcaster,
-    UserService
+    UserService,
+    Globals
   ],
   bootstrap: [ AppComponent ]
 })

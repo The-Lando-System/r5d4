@@ -1,3 +1,9 @@
+/* Global Styles */
+button:hover {
+  cursor: pointer;
+}
+
+
 body {
   background-color: #fafafa!important;
   background-image: url("resources/images/R5-D4.png");

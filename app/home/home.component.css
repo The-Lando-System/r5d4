@@ -1,49 +1,11 @@
-#home {
-  margin-right: 30px;
-}
-
 .row {
   margin:30px;
 }
 
-.note-card {
-  position:relative;
-  margin-top: 30px;
-  min-height: 200px;
-  max-height: 400px;
-  min-width: 200px;
-}
-
-.note-bottom {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 10px;
-  width: 90%;
-}
-
-.new-folder-row {
-  min-height: 50px;
-}
-
-.new-folder-element {
-  margin-left: 20px;
-}
-
-.pull-right {
-  float: right;
-}
-
-#add-folder-button {
-  border: none;
-  background: none;
-}
-
-#add-folder-button:hover {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.centered {
-  text-align: center;
+.card {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  border: solid #CCCCCC 1px;
+  border-radius: 1px;
 }

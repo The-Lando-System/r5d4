@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Broadcaster } from '../sarlacc-client/broadcaster';
 import { UserService } from '../sarlacc-client/user.service';
 import { User } from '../sarlacc-client/user';
+import { Globals } from '../globals';
 
 @Component({
   moduleId: module.id,
@@ -12,11 +13,12 @@ import { User } from '../sarlacc-client/user';
 export class NavbarComponent implements OnInit {
 
   user: User;
-  welcome = 'R5-D4';
-  baseSarlaccUrl = 'http://sarlacc.mattvoget.com/token/';
+  welcome = 'R5-D4 : Check your Network Speed';
+  tokenUrl = this.globals.sarlacc_domain + '/token/';
   sarlaccUrl = '';
 
   constructor(
+    private globals: Globals,
     private userService: UserService,
     private broadcaster: Broadcaster
   ){}
@@ -25,7 +27,7 @@ export class NavbarComponent implements OnInit {
     this.userService.returnUser()
     .then((user:User) => {
       this.user = user;
-      this.sarlaccUrl = this.baseSarlaccUrl + this.userService.getToken().access_token;
+      this.sarlaccUrl = this.tokenUrl + this.userService.getToken().access_token;
     }).catch((error:string) => {});
 
     this.listenForLogin();
@@ -45,7 +47,7 @@ export class NavbarComponent implements OnInit {
       this.userService.returnUser()
       .then((user:User) => {
         this.user = user;
-        this.sarlaccUrl = this.baseSarlaccUrl + this.userService.getToken().access_token;
+        this.sarlaccUrl = this.tokenUrl + this.userService.getToken().access_token;
       }).catch((error:string) => {});
     });
   }
