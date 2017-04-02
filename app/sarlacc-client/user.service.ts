@@ -14,8 +14,8 @@ export class UserService {
 
   private TAG = 'UserService - ';
 
-  private tokenUrl = 'https://sarlacc.herokuapp.com/oauth/token';
-  private userUrl = 'https://sarlacc.herokuapp.com/user-details';
+  private tokenUrl = 'http://sarlacc.voget.io/oauth/token';
+  private userUrl = 'http://sarlacc.voget.io/user-details';
 
   private token: Token;
   private user: User;
