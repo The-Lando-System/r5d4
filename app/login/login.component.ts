@@ -1,9 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { Broadcaster } from '../sarlacc-client/broadcaster';
-import { UserService } from '../sarlacc-client/user.service';
-import { User } from '../sarlacc-client/user';
+import { UserService, User, Broadcaster } from 'sarlacc-angular-client';
 
 @Component({
   moduleId: module.id,
